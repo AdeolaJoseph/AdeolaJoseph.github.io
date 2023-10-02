@@ -5,7 +5,10 @@
   --header-height: 3rem;
   /*========== Colors ==========*/
   /* Change favorite color */
-  --hue-color: 160;
+  --hue-color: 221;
+
+  /* hsl(221, 39%, 89%) */
+
   /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
   /* HSL color mode */
   /* --first-color: hsl(var(--hue-color), 29%, 61%); */
@@ -24,8 +27,9 @@
   --text-color: hsl(var(--hue-color), 8%, 45%);
   --text-color-light: hsl(var(--hue-color), 8%, 52%);
   --input-color: hsl(var(--hue-color), 70%, 96%);
-  /* --body-color: hsl(var(--hue-color), 60%, 99%); */
-  --body-color: #d8dfee;
+  --body-color: hsl(var(--hue-color), 60%, 96%);
+  /* --body-color: #d8dfee; */
+  /* --body-color: hsl(var(--hue-color)) */
   /* --body-color: #ABA8A9; */
   /* --body-color: #B1A296; */
   /* --body-color: #adadad; */
