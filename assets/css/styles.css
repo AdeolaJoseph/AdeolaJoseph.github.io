@@ -35,7 +35,8 @@
   /* --body-color: #adadad; */
 
 
-  --container-color: #FFF;
+  /* --container-color: #FFF; */
+  --container-color: hsl(var(--hue-color), 10%, 90%);
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
   /*========== Font and typography ==========*/
@@ -753,6 +754,59 @@ img {
   opacity: 1;
   visibility: visible;
 }
+
+
+/*==================== GALLERY ====================*/
+/*==================== GALLERY ====================*/
+/*==================== GALLERY ====================*/
+/*==================== GALLERY ====================*/
+.gallery__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+/* Adjustments for wide, tall, and large items */
+.gallery__item.wide, .gallery__item.tall, .gallery__item.large {
+  grid-column: span 2;
+}
+.gallery__item.large {
+  grid-row: span 2;
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.25rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.gallery__item:hover .gallery__img {
+  transform: scale(1.1);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .gallery__container {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .gallery__item.wide, .gallery__item.tall, .gallery__item.large {
+    grid-column: span 1; /* Make all items span only one column on smaller screens */
+  }
+  .gallery__item.large {
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery__container {
+    grid-template-columns: 1fr; /* Single column layout for very small screens */
+  }
+}
+
 
 /*==================== PORTFOLIO ====================*/
 .portfolio__container {
